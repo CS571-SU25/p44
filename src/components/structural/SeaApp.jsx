@@ -23,7 +23,7 @@ function SeaApp() {
     }]
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<SeaLayout />}>
           <Route index element={<SeaHome creatures={creatures} />}></Route>
@@ -35,7 +35,7 @@ function SeaApp() {
 
         </Route>
       </Routes>
-    </BrowserRouter >)
+    </HashRouter >)
 }
 
 export default SeaApp
