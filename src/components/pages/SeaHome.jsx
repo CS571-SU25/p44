@@ -5,7 +5,8 @@ import SeaCreatureRanking from "../SeaCreatureRanking";
 
 export default function SeaHome(props) {
     return <div>
-        <h1>Sea Creatures!</h1>
+        <h1>Sea Creature Home!</h1>
+        <h2>Creatures</h2>
         <Container>
             <Row className="row-gap-3">
                 {Object.entries(props.creatures).map(c => {
