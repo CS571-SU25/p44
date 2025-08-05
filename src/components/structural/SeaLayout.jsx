@@ -9,6 +9,7 @@ function SeaLayout(props) {
                 <Container>
                     <Nav >
                         <Nav.Link as={Link} to="/">Home</Nav.Link>
+                        <Nav.Link as={Link} to="finder">Creature Finder</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
@@ -16,7 +17,7 @@ function SeaLayout(props) {
 
                 <Outlet />
             </div>
-        </div>
+        </div >
     )
 }
 

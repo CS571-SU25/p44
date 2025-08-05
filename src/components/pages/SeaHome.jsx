@@ -1,5 +1,6 @@
 import { Row, Col, Container } from "react-bootstrap";
 import SeaCreatureSummary from "../SeaCreatureSummary";
+import SeaCreatureRanking from "../SeaCreatureRanking";
 
 
 export default function SeaHome(props) {
@@ -7,13 +8,14 @@ export default function SeaHome(props) {
         <h1>Sea Creatures!</h1>
         <Container>
             <Row className="row-gap-3">
-                {props.creatures.map(c => {
-                    console.log(c)
-                    return <Col key={c.id} xs={12} sm={12} md={6} lg={4} xl={3}>
-                        <SeaCreatureSummary {...c} />
+                {Object.entries(props.creatures).map(c => {
+                    return <Col key={c[0]} xs={12} sm={12} md={6} lg={4} xl={3}>
+                        <SeaCreatureSummary {...c} handleVote={props.handleVote} />
                     </Col>
                 })}
             </Row>
         </Container>
+        <h2>Sea Creature Ranking!</h2>
+        <SeaCreatureRanking creatures={props.creatures} />
     </div>
 }
